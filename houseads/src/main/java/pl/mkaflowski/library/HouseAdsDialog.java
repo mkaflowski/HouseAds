@@ -24,8 +24,10 @@ import android.support.v4.graphics.drawable.DrawableCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.graphics.Palette;
 import android.support.v7.widget.CardView;
+import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RatingBar;
@@ -64,7 +66,7 @@ public class HouseAdsDialog {
     private int ctaCorner = 25;
     private AdListener mAdListener;
     private AlertDialog dialog;
-    private int themeId;
+    private int themeId = 0;
 
     public HouseAdsDialog(Context context) {
         this.mCompatActivity = context;
@@ -131,9 +133,20 @@ public class HouseAdsDialog {
         this.usePaletteColor = usePaletteColor;
     }
 
+    public void setThemeId(int themeId) {
+        this.themeId = themeId;
+    }
+
     @SuppressLint("NewApi")
     private void setUp(String response) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(mCompatActivity);
+
+        AlertDialog.Builder builder;
+        ContextThemeWrapper ctw = null;
+        if (themeId != 0) {
+            ctw = new ContextThemeWrapper(mCompatActivity, R.style.HomeAd);
+            builder = new AlertDialog.Builder(ctw);
+        } else
+            builder = new AlertDialog.Builder(mCompatActivity);
 
         ArrayList<DialogModal> val = new ArrayList<>();
 
@@ -176,7 +189,15 @@ public class HouseAdsDialog {
             else lastLoaded++;
 
 
-            @SuppressLint("InflateParams") final View view = LayoutInflater.from(mCompatActivity).inflate(R.layout.dialog, null);
+//            @SuppressLint("InflateParams") final View view = LayoutInflater.from(mCompatActivity).inflate(R.layout.dialog, null);
+
+            View view;
+            if (themeId != 0 && ctw != null) {
+                LayoutInflater inflater = (LayoutInflater) ctw.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                view = inflater.inflate(R.layout.dialog,
+                        null);
+            } else
+                view = LayoutInflater.from(mCompatActivity).inflate(R.layout.dialog, null);
 
             if (dialogModal.getIconUrl().trim().equals("") || !dialogModal.getIconUrl().trim().contains("http"))
                 throw new IllegalArgumentException("Icon URL should not be Null or Blank & should start with \"http\"");
