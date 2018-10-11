@@ -93,7 +93,7 @@ houseAds.loadAds();
 
 <br/>To edit dialog style make HomeAd in styles.xml 
 ```xml
-<style name="HomeAd" parent="AppTheme" />
+<style name="HomeAd" parent="AppTheme"/>
 ```
              
 <br/>You can check if the Ad is loaded via - 
