@@ -20,7 +20,6 @@
 
     </style>
 
-    <style name="HomeAd" parent="AppTheme">
-    </style>
+    <style name="HomeAd" parent="AppTheme" />
 
 </resources>
