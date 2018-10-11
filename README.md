@@ -74,6 +74,9 @@ Json Array Schema that you'll have to put on a server:
 <!-- <br/>Code Examples will be added later, till then you can check Sample App!-->
 
 ## HouseAdsDialog
+
+![](https://github.com/mkaflowski/HouseAds/blob/master/raw/Zrzut%20ekranu%202018-10-11%20o%2014.35.03.png?raw=true)
+
 HouseAdsDialog is a Beautifully Styled Dialog which shows your Ad Assets like Header Image, App Icon, App Title & Description, Call to Action Button, Star Ratings & Price of the App.
 <br/>The library internally uses `Palette API` to color the CTA Button by fetching the `Dominant Color` from Icon or Header Bitmap, whichever available.
 
