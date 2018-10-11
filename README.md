@@ -18,7 +18,7 @@ Add JitPack in your root build.gradle at the end of repositories:
 Add it as a dependency in your app's build.gradle file:
 ```
     dependencies {
-        compile 'com.github.mkaflowski:HouseAds:1.x' //CHANGE X TO CURRENT VERSION!!!
+        implementation 'com.github.mkaflowski:HouseAds:1.x' //CHANGE X TO CURRENT VERSION!!!
     }
 ```
 
