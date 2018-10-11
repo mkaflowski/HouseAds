@@ -90,6 +90,11 @@ houseAds.setForceLoadFresh(false); //Fetch Json everytime loadAds() is called, t
 houseAds.showHeaderIfAvailable(false); //Show Header Image if available, true by default
 houseAds.loadAds();
 ```
+
+<br/>To edit dialog style make HomeAd in styles.xml 
+```xml
+<style name="HomeAd" parent="AppTheme"/>
+```
              
 <br/>You can check if the Ad is loaded via - 
 ```java
