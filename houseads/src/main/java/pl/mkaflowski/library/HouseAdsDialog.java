@@ -210,7 +210,7 @@ public class HouseAdsDialog {
             SharedPreferences sp = PreferenceManager
                     .getDefaultSharedPreferences(mCompatActivity);
 
-            if(sp.getBoolean(dialogModal.getPackageOrUrl(),false))
+            if(sp.getBoolean("housead"+dialogModal.getPackageOrUrl(),false))
                 return;
 
             CardView cardView = view.findViewById(R.id.houseAds_card_view);
@@ -234,7 +234,7 @@ public class HouseAdsDialog {
                 @Override
                 public void onClick(View v) {
                     dialog.dismiss();
-                    editor.putBoolean(dialogModal.getPackageOrUrl(),
+                    editor.putBoolean("housead"+dialogModal.getPackageOrUrl(),
                             true);
                     editor.apply();
                 }
