@@ -83,17 +83,13 @@ HouseAdsDialog houseAds = new HouseAdsDialog(MainActivity.this);
 houseAds.setUrl(adURL); //URL to Json File
 houseAds.hideIfAppInstalled(false); //An App's Ad will be shown if it is Installed on the Device.
 houseAds.setUsePaletteColor(false);
+houseAds.setThemeId(R.style.AppTheme);
 houseAds.setThemeId(android.R.style.Theme_Dialog);
 houseAds.setCardCorners(100); // Set CardView's corner radius.
 houseAds.setCtaCorner(100); //Set CTA Button's background radius.
 houseAds.setForceLoadFresh(false); //Fetch Json everytime loadAds() is called, true by default, if set to false, Json File's Response is kept untill App is closed! 
 houseAds.showHeaderIfAvailable(false); //Show Header Image if available, true by default
 houseAds.loadAds();
-```
-
-<br/>To edit dialog style make HomeAd in styles.xml 
-```xml
-<style name="HomeAd" parent="AppTheme"/>
 ```
              
 <br/>You can check if the Ad is loaded via - 
