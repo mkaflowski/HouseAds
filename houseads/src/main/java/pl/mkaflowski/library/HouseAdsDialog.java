@@ -144,7 +144,7 @@ public class HouseAdsDialog {
         AlertDialog.Builder builder;
         ContextThemeWrapper ctw = null;
         if (themeId != 0) {
-            ctw = new ContextThemeWrapper(mCompatActivity, R.style.HomeAd);
+            ctw = new ContextThemeWrapper(mCompatActivity, themeId);
             builder = new AlertDialog.Builder(ctw);
         } else
             builder = new AlertDialog.Builder(mCompatActivity);
