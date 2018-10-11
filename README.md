@@ -115,7 +115,7 @@ houseAds.setAdListener(new AdListener() {
     public void onAdShown() {}
      
     @Override
-    public void onApplicationLeft() {}
+    public void onAdClicked {}
 });
 ```
 
