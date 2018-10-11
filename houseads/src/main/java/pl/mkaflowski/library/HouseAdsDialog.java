@@ -11,12 +11,14 @@ import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.GradientDrawable;
 import android.net.Uri;
+import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
@@ -27,7 +29,6 @@ import android.support.v7.widget.CardView;
 import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RatingBar;
@@ -206,6 +207,11 @@ public class HouseAdsDialog {
             if (dialogModal.getAppTitle().trim().equals("") || dialogModal.getAppDesc().trim().equals(""))
                 throw new IllegalArgumentException("Title & description should not be Null or Blank.");
 
+            SharedPreferences sp = PreferenceManager
+                    .getDefaultSharedPreferences(mCompatActivity);
+
+            if(sp.getBoolean(dialogModal.getPackageOrUrl(),false))
+                return;
 
             CardView cardView = view.findViewById(R.id.houseAds_card_view);
             cardView.setRadius(cardCorner);
@@ -220,6 +226,19 @@ public class HouseAdsDialog {
             TextView description = view.findViewById(R.id.houseAds_description);
             final RatingBar ratings = view.findViewById(R.id.houseAds_rating);
             TextView price = view.findViewById(R.id.houseAds_price);
+
+
+            final SharedPreferences.Editor editor = sp.edit();
+            TextView dontRemind = view.findViewById(R.id.houseAds_dontre);
+            dontRemind.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    dialog.dismiss();
+                    editor.putBoolean(dialogModal.getPackageOrUrl(),
+                            true);
+                    editor.apply();
+                }
+            });
 
             Glide.with(mCompatActivity).asBitmap().load(dialogModal.getIconUrl()).into(new SimpleTarget<Bitmap>(Integer.MIN_VALUE, Integer.MIN_VALUE) {
                 @Override

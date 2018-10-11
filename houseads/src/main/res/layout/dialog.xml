@@ -1,36 +1,35 @@
-<android.support.v7.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/houseAds_card_view"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:layout_margin="10dp">
+    android:layout_margin="10dp"
+    android:orientation="vertical">
 
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:gravity="center">
-
-
-    <ImageView
-        android:id="@+id/houseAds_header_image"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:scaleType="centerCrop"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginTop="5dp"
-        android:visibility="gone"
-        android:contentDescription="@string/header_image" />
+        android:gravity="center">
+
+
+        <ImageView
+            android:id="@+id/houseAds_header_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/header_image"
+            android:scaleType="centerCrop"
+            android:visibility="gone" />
 
 
         <LinearLayout
-            android:layout_below="@id/houseAds_header_image"
             android:id="@+id/houseAds_ad_asset_holder"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@id/houseAds_header_image"
             android:layout_margin="10dp"
             android:orientation="horizontal">
 
@@ -52,29 +51,29 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="17sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/houseAds_description"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
-                    android:textSize="14sp"/>
+                    android:textSize="14sp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="10dp">
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
 
                     <android.support.v7.widget.AppCompatRatingBar
                         android:id="@+id/houseAds_rating"
+                        style="@style/Widget.AppCompat.RatingBar.Small"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:numStars="5"
-                        android:stepSize="0.1"
                         android:isIndicator="true"
-                        style="@style/Widget.AppCompat.RatingBar.Small"/>
+                        android:numStars="5"
+                        android:stepSize="0.1" />
 
                     <TextView
                         android:id="@+id/houseAds_price"
@@ -83,24 +82,45 @@
                         android:layout_marginStart="10dp"
                         android:layout_marginLeft="10dp" />
                 </LinearLayout>
-        </LinearLayout>
+            </LinearLayout>
         </LinearLayout>
 
 
-        <Button
-            android:layout_below="@id/houseAds_ad_asset_holder"
-            android:id="@+id/houseAds_cta"
+        <LinearLayout
+            android:id="@+id/houseAds_lay"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_marginRight="20dp"
+            android:layout_below="@id/houseAds_ad_asset_holder"
             android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
             android:gravity="center"
+            android:orientation="horizontal"
             android:textColor="#ffffff"
-            android:background="@drawable/button_bg"
-            android:textSize="12sp" />
+            tools:background="@color/cardview_dark_background">
+
+            <TextView
+                android:id="@+id/houseAds_dontre"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Don't remind"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/houseAds_cta"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="@drawable/button_bg"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+
+        </LinearLayout>
 
 
-</RelativeLayout>
+    </RelativeLayout>
 </android.support.v7.widget.CardView>
