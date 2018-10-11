@@ -64,6 +64,7 @@ public class HouseAdsDialog {
     private int ctaCorner = 25;
     private AdListener mAdListener;
     private AlertDialog dialog;
+    private int themeId;
 
     public HouseAdsDialog(Context context) {
         this.mCompatActivity = context;
@@ -130,9 +131,18 @@ public class HouseAdsDialog {
         this.usePaletteColor = usePaletteColor;
     }
 
+    public void setThemeId(int themeId) {
+        this.themeId = themeId;
+    }
+
     @SuppressLint("NewApi")
     private void setUp(String response) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(mCompatActivity);
+        AlertDialog.Builder builder;
+        if (themeId != 0)
+            builder = new AlertDialog.Builder(mCompatActivity, themeId);
+        else
+            builder = new AlertDialog.Builder(mCompatActivity);
+
         ArrayList<DialogModal> val = new ArrayList<>();
 
         try {

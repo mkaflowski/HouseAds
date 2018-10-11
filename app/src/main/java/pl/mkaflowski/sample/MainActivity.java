@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         final HouseAdsDialog houseAds = new HouseAdsDialog(MainActivity.this);
-        String url = "http://url";
+        String url = "http://kofii12345.usermd.net/apps.json";
         houseAds.setUrl(url); //URL to Json File
 //        houseAds.setCardCorners(100); // Set CardView's corner radius.
 //        houseAds.setCtaCorner(100); //Set CTA Button's background radius.
