@@ -1,5 +1,6 @@
 # HouseAds
 A simple Android library (currently in early stage) to cross promote your apps, sites!
+This is modified version of https://github.com/ItzNotABug/HouseAds.
 <br/>Currently includes a Dialog & Interstitial Ad fetched from a json stored on a site/server.
 
 
