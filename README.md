@@ -4,10 +4,6 @@ This is modified version of https://github.com/ItzNotABug/HouseAds.
 <br/>Currently includes a Dialog & Interstitial Ad fetched from a json stored on a site/server.
 
 
-Primary Goal:
-<br/>To keep it Simple & including Ads support like AdMob's Ad (Native, Interstitial)
-<br/>No!, No Banners!
-
 ## Gradle
 Add JitPack in your root build.gradle at the end of repositories:
 ```
