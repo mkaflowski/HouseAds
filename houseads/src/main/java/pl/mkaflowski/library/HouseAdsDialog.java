@@ -131,17 +131,9 @@ public class HouseAdsDialog {
         this.usePaletteColor = usePaletteColor;
     }
 
-    public void setThemeId(int themeId) {
-        this.themeId = themeId;
-    }
-
     @SuppressLint("NewApi")
     private void setUp(String response) {
-        AlertDialog.Builder builder;
-        if (themeId != 0)
-            builder = new AlertDialog.Builder(mCompatActivity, themeId);
-        else
-            builder = new AlertDialog.Builder(mCompatActivity);
+        AlertDialog.Builder builder = new AlertDialog.Builder(mCompatActivity);
 
         ArrayList<DialogModal> val = new ArrayList<>();
 

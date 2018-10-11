@@ -1,6 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorPrimary">#b70f09</color>
+    <color name="colorBackground">#fafafa</color>
+    <color name="colorBackgroundLightTheme">#fafafa</color>
+    <color name="colorSecond">#b70f09</color>
+    <color name="colorPrimaryDark">#880300</color>
+    <color name="colorAccent">#b70f09</color>
+    <color name="colorEmpty">#cbb70f09</color>
+    <color name="yellow">#f5e100</color>
+    <color name="colorCardText">#222222</color>
+    <color name="colorCardTextWhite">#ffffff</color>
+    <color name="colorGray">#fafafa</color>
+    <color name="colorText">#3d3d3d</color>
+    <color name="colorControlHighlight">#ffcfcd</color>
+
+
+    <color name="notificationBackground">#212121</color>
+    <color name="colorSeekBar">#fafafa</color>
+
+    <color name="tabIndicatorColor">#fafafa</color>
+    <color name="tabSelectedTextColor">@color/colorCardTextWhite</color>
+    <color name="tabTextColor">#d89c9a</color>
+
+
+    <color name="colorPrimary2">#212121</color>
+    <color name="colorBackground2">#141414</color>
+    <color name="colorBackgroundLightTheme2">#e9e9e9</color>
+    <color name="colorSecond2">#2b2b2b</color>
+    <color name="colorPrimaryDark2">#212121</color>
+    <color name="colorAccent2">#ff9800</color>
+    <color name="colorEmpty4">#e4ff9800</color>
+    <color name="yellow2">#f5e100</color>
+    <color name="colorCardText2">#f5f5f5</color>
+    <color name="colorSelected2">#40c900</color>
+    <color name="colorGray2">#f1f1f1</color>
+    <color name="colorText2">#e2e2e2</color>
+    <color name="notificationBackground2">#212121</color>
+    <color name="colorSeekBar2">#e2e2e2</color>
+    <color name="tabIndicatorColor2">#ff9800</color>
+    <color name="tabSelectedTextColor2">@color/colorCardText2</color>
+    <color name="tabTextColor2">#bdf6f5f2</color>
+
+    <color name="colorPrimary3">#583787</color>
+    <color name="colorBackground3">#ebe9e9</color>
+    <color name="colorBackgroundLightTheme3">#e9e9e9</color>
+    <color name="colorPrimaryDark3">#583787</color>
+    <color name="colorAccent3">#af62b0</color>
+    <color name="colorEmpty3">#d9af62b0</color>
+    <color name="colorCardText3">#f5f5f5</color>
+    <color name="tabIndicatorColor3">#583787</color>
+    <color name="tabSelectedTextColor3">@color/colorCardText2</color>
+    <color name="tabTextColor3">#bdf6f5f2</color>
+    <color name="colorControlHighlight3">#f4cdff</color>
+
+
+    <color name="greyDivider">#dadada</color>
+    <color name="greyIcon">#878787</color>
+
+
+    <color name="colorPrimary4">#ff9801</color>
+    <color name="colorPrimaryDark4">#f77d02</color>
+    <color name="windowBackground4">#f1f1f1</color>
+    <color name="colorSecond4">@color/colorPrimary4</color>
+    <color name="colorAccent4">#f77d02</color>
+    <color name="colorControlHighlight4">@color/tabSelectedTextColor</color>
+
+    <color name="drawer_background4">@color/colorBackgroundDN</color>
+    <color name="material_drawer_primary_text4">@color/colorPrimaryDark4</color>
+    <color name="material_drawer_primary_icon4">#878787</color>
+    <color name="material_drawer_secondary_text4">#222222</color>
+    <color name="material_drawer_divider4">@color/greyDividerDN</color>
+    <color name="material_drawer_selected4">@color/colorPrimary4</color>
+    <color name="material_drawer_selected_text4">@color/colorBackground</color>
+    <color name="material_drawer_header_selection_text4">@color/tabIndicatorColor</color>
+
+    <color name="tabMyIndicatorColor4">@color/tabIndicatorColorDN</color>
+    <color name="tabMySelectedTextColor4">@color/tabSelectedTextColorDN</color>
+    <color name="tabMyBackgroundColor4">@color/colorPrimary4</color>
+    <color name="tabMyTextColor4">#ffe8c7</color>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="white">#ffffff</color>
+
+    <color name="dividerColorLight">#71fafafa</color>
+    <color name="dividerColorDark">#8f000000</color>
+
+
+    <!--overriding base colors-->
+
+    <color name="colorPrimaryDN">@color/colorPrimary2</color>
+    <color name="colorPrimaryDarkDN">@color/colorPrimaryDark2</color>
+    <color name="windowBackgroundDN">@color/colorBackground2</color>
+    <color name="colorSecondDN">#2b2b2b</color>
+    <color name="colorAccentDN">#ff9800</color>
+    <color name="colorControlHighlightDN">@color/tabSelectedTextColor</color>
+
+    <color name="material_drawer_selected_textDN">@color/colorAccent2</color>
+    <color name="material_drawer_header_selection_textDN">@color/tabIndicatorColor</color>
+
+    <color name="tabMyIndicatorColorDN">@color/tabIndicatorColor2</color>
+    <color name="tabMySelectedTextColorDN">@color/tabSelectedTextColor2</color>
+    <color name="tabMyTextColorDN">@color/tabTextColor2</color>
+    <color name="tabMyBackgroundColorDN">@color/colorPrimary2</color>
+    <color name="colorBackgroundDN">#f1f1f1</color>
+    <color name="colorCardTextDN">#222222</color>
+    <color name="colorCardTextWhiteDN">#ffffff</color>
+    <color name="colorGrayDN">#fafafa</color>
+    <color name="colorTextDN">#3d3d3d</color>
+    <color name="greyDividerDN">#dadada</color>
+    <color name="tabIndicatorColorDN">#fafafa</color>
+    <color name="tabSelectedTextColorDN">@color/colorCardTextWhite</color>
+    <color name="tabTextColorDN">#d89c9a</color>
+    <!--overriding base colors end-->
+
+
 </resources>
