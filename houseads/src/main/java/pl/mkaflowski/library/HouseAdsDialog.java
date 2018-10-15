@@ -240,7 +240,7 @@ public class HouseAdsDialog {
                 }
             });
 
-            Glide.with(mCompatActivity).asBitmap().load(dialogModal.getIconUrl()).into(new SimpleTarget<Bitmap>(Integer.MIN_VALUE, Integer.MIN_VALUE) {
+            Glide.with(mCompatActivity.getApplicationContext()).asBitmap().load(dialogModal.getIconUrl()).into(new SimpleTarget<Bitmap>(Integer.MIN_VALUE, Integer.MIN_VALUE) {
                 @Override
                 public void onResourceReady(@NonNull Bitmap resource, @Nullable Transition<? super Bitmap> transition) {
                     icon.setImageBitmap(resource);
@@ -271,7 +271,7 @@ public class HouseAdsDialog {
             if (!dialogModal.getLargeImageUrl().trim().equals("") && showHeader)
                 headerImage.setVisibility(View.VISIBLE);
 
-            Glide.with(mCompatActivity).asBitmap().listener(new RequestListener<Bitmap>() {
+            Glide.with(mCompatActivity.getApplicationContext()).asBitmap().listener(new RequestListener<Bitmap>() {
                 @Override
                 public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Bitmap> target, boolean isFirstResource) {
                     if (e != null)
