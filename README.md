@@ -245,18 +245,6 @@ houseAdsNative.setCallToActionListener(new NativeAdListener.CallToActionListener
 ```
 <br/>**Note: If you don't implement the CTAListener, default implementation is used which navigates the user to PlayStore or Website depending on the passed argument to the "app_uri" object in json, when clicked.**
 
-## ProGuard
-```
--keep class org.jsoup.**
--keep public class * implements com.bumptech.glide.module.GlideModule
--keep public class * extends com.bumptech.glide.module.AppGlideModule
--keep public enum com.bumptech.glide.load.ImageHeaderParser$** {
-  **[] $VALUES;
-  public *;
-}
-```
-
-
 ## Clearing the Cache.
 HouseAds uses Glide for Image Loading and Caching, therefore you should clear its cache periodically by calling the following method - 
 ```java
