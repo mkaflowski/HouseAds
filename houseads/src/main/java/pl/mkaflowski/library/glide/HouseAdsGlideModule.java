@@ -19,6 +19,8 @@ public class HouseAdsGlideModule implements GlideModule {
 
     @Override
     public void applyOptions(@NonNull Context context, @NonNull GlideBuilder builder) {
+        if (context.getExternalCacheDir() == null)
+            return;
         //noinspection ConstantConditions
         String path = context.getExternalCacheDir().getAbsolutePath() + "/glideCache/";
         int cacheSize = 104857600;
